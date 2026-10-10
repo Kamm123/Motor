@@ -1,15 +1,60 @@
 public class Motor {
-    public String nombre;
-    public double potencia;
+    private String nombre;
+    private double potencia;
 
-    double velocidad;
-    boolean encendido;
+    private double velocidad;
+    private boolean encendido;
+
+    // set()
+    public void setNombre(String nombre){
+        if(null == nombre || nombre.isBlank()){
+            System.out.println("El nombre no puede ser nulo ni estar vacio");
+        } else {
+            this.nombre = nombre;
+        }
+    }
+
+    public void setVelocidad(double velocidad){
+        this.velocidad = velocidad;
+    }
+
+    public void setPotencia(double potencia){
+        this.potencia = potencia;
+    }
+
+    public void setEncendido(boolean encendido){
+        this.encendido = encendido;
+    }
+
+    // get()
+    public String getNombre(){
+        return  nombre;
+    }
+
+    public double getVelocidad(){
+        return velocidad;
+    }
+
+    public double getPotencia(){
+        return potencia;
+    }
+
+    public boolean isEncendido(){
+        return encendido;
+    }
 
     //Metodos
     public void encender(){
-        encendido = true;
+        this.encendido = true;
         System.out.println("Encendiendo motor...");
         System.out.println("Motor Encendido correctamente.");
+        System.out.println();
+    }
+
+    void apagar(){
+        this.encendido = false;
+        System.out.println("Apagando motor...");
+        System.out.println("Motor apagado correctamente.");
         System.out.println();
     }
 
@@ -22,17 +67,10 @@ public class Motor {
         System.out.println();
     }
 
-    void apagar(){
-        encendido = false;
-        System.out.println("Apagando motor...");
-        System.out.println("Motor apagado correctamente.");
-        System.out.println();
-
-    }
-
     void mostrarEstado(){
         System.out.println("Estado del vehiculo");
         System.out.println("Estado: "+(encendido? "Encendido" : "Apagado"));
         System.out.println();
     }
 }
+

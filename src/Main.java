@@ -5,20 +5,20 @@ void main() {
     Motor M2 = new Motor();
     Motor M3 = new Motor();
 
-    M1.nombre = "Motor 1";
-    M1.potencia = 200;
-    M1.velocidad = 50;
-    M1.encendido= true;
+    M1.setNombre("Motor 1");
+    M1.setPotencia(200);
+    M1.setVelocidad(50);
+    M1.setEncendido(true);
 
-    M2.nombre = "Motor 2";
-    M2.potencia = 175;
-    M2.velocidad = 90;
-    M2.encendido= true;
+    M2.setNombre("Motor 2");
+    M2.setPotencia(175);
+    M2.setVelocidad(90);
+    M2.setEncendido(true);
 
-    M3.nombre = "Motor 3";
-    M3.potencia = 250;
-    M3.velocidad = 140;
-    M3.encendido= false;
+    M3.setNombre("Motor 3");
+    M3.setPotencia(250);
+    M3.setVelocidad(140);
+    M3.setEncendido(false);
 
     System.out.println("--------------MOTOR CARROS-------------");
     System.out.println("=====Motor 1=====");
